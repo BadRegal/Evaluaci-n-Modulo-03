@@ -1,0 +1,1 @@
+https://www.w3schools.com/bootstrap5/bootstrap_grid_basic.php  <-- Ahi esta el ayuda memoria de bootstrap5 para la division con espacios
