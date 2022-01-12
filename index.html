@@ -22,9 +22,7 @@
 <p id="test"></p>
  
     <script type="text/javascript">
-    //----CODIGO NUEVO
     let granTotal=0;
-    //----CODIGO NUEVO
     
       function ingreso(){
         async function getFile(){
@@ -109,7 +107,6 @@
       }
 
       function mostrarGenerarCompra(){
-        // let granTotal=0;
         let insertado="";
         for (var i=0; i<nombre.length;i++){
           let total = totCompra(valor[i],cantidad[i])
@@ -129,7 +126,6 @@
       function conIVA(c1){
         return c1+iva(c1);
       } 
-//-----------CODIGO NUEVO-------------------
       function descuento(){
         let miTotal= conIVA(granTotal);
         console.log("Valor de la variable Gran Total: "+granTotal);
@@ -158,7 +154,6 @@
       function eliminar(){
         let elim = document.getElementById('elim').value;
         if (contiene(elim,nombre)){
-          alert("Existe");
           let indice=nombre.indexOf(elim);
           nombre.splice(indice,1)
         }else{
@@ -171,7 +166,6 @@
         let emod=document.getElementById('emod').value;
         let cmod=parseInt(document.getElementById('cmod').value);
         if (contiene(emod,nombre)){
-          alert("Existe");
           let indice=nombre.indexOf(emod);
           cantidad[indice]=cmod;
         }else{
@@ -181,25 +175,10 @@
 
       }
       
-      
-      //Funcion Contiene para ver si el elemento existe
       function contiene(cadena, arreglo){
-			 //si "cadena" se encuentra en "arreglo" devuelve true, en caso contrario devuelve false
 			 return(arreglo.indexOf(cadena) > -1);
 		 }
-/*
-<div id="msgDescuento" hidden>
-<p> El nuevo valor con <span id="queDescuento"></span>% de descuento es <strong><span id="nuevoTotal"></span></strong></p>
-</div>
-*/
-//-----------CODIGO NUEVO-------------------
       
     </script>
   </body>
-  <!--
-    ok Genere una página web
-    ok donde se implemente un menú
-    el cual llame mediante Ajax a más de una pagina web,
-    donde estas web’s se carguen como contenido en un contenedor dentro de la página principal.
-  -->
 </html>
